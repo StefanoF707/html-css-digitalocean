@@ -49,6 +49,7 @@ header > #navbar {
   left: 0;
   z-index: 2;
   background: #fff;
+  box-shadow: 0px 9px 17px -15px #000000;
 }
 
 #navbar .logo_container {
@@ -75,7 +76,7 @@ header > #navbar {
   border: 1px solid #006AFF;
 }
 #navbar li a.btn_signUp:hover {
-  animation: sign_Up-button 0.3s forwards;
+  animation: btn_signUp 0.3s forwards;
 }
 /* /navbar */
 
@@ -85,7 +86,8 @@ header #jumbotron {
   margin-top: 60px;
   background-image: url("https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg");
   background-repeat: repeat;
-  background-size: cover
+  background-size: cover;
+  background-position: bottom;
 }
 
 #jumbotron .subtitle {
@@ -118,13 +120,12 @@ header #jumbotron {
 .signUp_card .btn_google {
   position: relative;
   font-weight: bold;
-  color: #626262;
   background: #fff;
+  color: #626262;
   border: 1px solid #626262;
 }
 .signUp_card .btn_google:hover {
-  color: #000;
-    border: 1px solid #000;
+  animation: btn_google 0.3s forwards;
 }
 .signUp_card .btn_google::before {
   content: "";
@@ -147,8 +148,56 @@ header #jumbotron {
   margin-top: 16px;
 }
 /* /jumbotron */
-
 /* /HEADER */
+
+/* MAIN */
+/* brands */
+main #brands {
+  padding: 50px 0;
+  background: #F3F5F9;
+}
+
+#brands > h6 {
+  font-size: 14px;
+  color: #5B6987;
+}
+
+#brands .brands_item_container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#brands .brands_item {
+  height: 90px;
+  line-height: 90px;
+  margin: 0 10px;
+  width: calc(100% / 2 - 20px);
+  float: left;
+}
+.brands_item > img {
+  width: 110px;
+  vertical-align: middle;
+}
+
+#brands > .customer_link {
+  font-weight: 600;
+}
+#brands > .customer_link::after {
+  content: "\f105";
+  font-family: "FontAwesome";
+  padding-left: 7px;
+  vertical-align: middle;
+}
+#brands > .customer_link:hover {
+  text-decoration: none;
+  color: #1633FF;
+}
+/* /brands */
+
+/* /MAIN */
+
+
 
 /* MEDIA QUERIES */
 
@@ -159,8 +208,25 @@ header #jumbotron {
     width: 180px;
   }
 
+
   #jumbotron .signUp_card h3 {
     font-size: 29px
+  }
+
+
+  #brands .brands_item_container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  #brands .brands_item {
+    width: calc(100% / 6 - 20px);
+    height: 110px;
+    line-height: 110px;
+  }
+.brands_item > img {
+    width: 120px;
   }
 
 
@@ -170,9 +236,8 @@ header #jumbotron {
 /* /MEDIA QUERIES */
 
 
-
 /* KEYFRAMES */
-@keyframes sign_Up-button {
+@keyframes btn_signUp {
   0% {
     color: #006AFF;
     background: #fff;
@@ -189,6 +254,17 @@ header #jumbotron {
   }
   100% {
     background: #006AFF;
+  }
+}
+
+@keyframes btn_google {
+  0% {
+    color: #626262;
+    border: 1px solid #626262;
+  }
+  100% {
+    color: #000;
+    border: 1px solid #000;
   }
 }
 /* /KEYFRAMES */
