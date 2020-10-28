@@ -25,6 +25,16 @@ body {
 .arrow_down::after {
   content: "\f107";
   font-family: "FontAwesome";
+  padding-left: 3px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+}
+
+h1 {
+  font-size: 3em;
+  color: #fff;
 }
 /* /UTILITIES */
 
@@ -37,7 +47,8 @@ header > #navbar {
   position: fixed;
   top: 0;
   left: 0;
-    border: 1px solid #000;
+  z-index: 2;
+  background: #fff;
 }
 
 #navbar .logo_container {
@@ -64,21 +75,101 @@ header > #navbar {
   border: 1px solid #006AFF;
 }
 #navbar li a.btn_signUp:hover {
-  animation: sign_Up-button 0.2s forwards;
+  animation: sign_Up-button 0.3s forwards;
+}
+/* /navbar */
+
+/* jumbotron */
+header #jumbotron {
+  padding: 50px 0;
+  margin-top: 60px;
+  background-image: url("https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg");
+  background-repeat: repeat;
+  background-size: cover
 }
 
-/* /navbar */
+#jumbotron .subtitle {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #BBCCFF;
+  margin-bottom: 30px;
+}
+
+#jumbotron .signUp_card {
+  padding: 15px;
+  border-radius: 7px;
+  background: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#jumbotron .signUp_card h3 {
+  color:  #006AFF;
+}
+
+.signUp_card .btn_create_account {
+  font-weight: 600;
+  color: #fff;
+  background: #579AFF;
+}
+.signUp_card .btn_create_account:hover {
+  animation: btn_create_account 0.3s forwards;
+}
+
+.signUp_card .btn_google {
+  position: relative;
+  font-weight: bold;
+  color: #626262;
+  background: #fff;
+  border: 1px solid #626262;
+}
+.signUp_card .btn_google:hover {
+  color: #000;
+    border: 1px solid #000;
+}
+.signUp_card .btn_google::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-image: url("../img/google-logo.png");
+  background-size: contain;
+  margin-right: 15px;
+}
+
+.signUp_card .terms_of_service {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+/* /jumbotron */
+
 /* /HEADER */
 
 /* MEDIA QUERIES */
+
+/* dispositivi MD */
 @media screen and (min-width: 992px) {
 
   #navbar .logo_container {
     width: 180px;
   }
 
+  #jumbotron .signUp_card h3 {
+    font-size: 29px
+  }
+
+
 }
+/* /dispositivi MD */
+
 /* /MEDIA QUERIES */
+
+
 
 /* KEYFRAMES */
 @keyframes sign_Up-button {
@@ -88,6 +179,15 @@ header > #navbar {
   }
   100% {
     color: #fff;
+    background: #006AFF;
+  }
+}
+
+@keyframes btn_create_account {
+  0% {
+    background:  #579AFF;
+  }
+  100% {
     background: #006AFF;
   }
 }
