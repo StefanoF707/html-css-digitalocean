@@ -8,6 +8,10 @@ body {
 }
 
 /* UTILITIES */
+:focus {
+  outline: 0;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-weight: bold;
 }
@@ -59,14 +63,16 @@ ul {
   color: #1633FF;
 }
 
+.arrow_down::after {
+  content: "\f107";
+  font-family: "FontAwesome";
+  padding-left: 3px;
+}
+
 .container,
 .row,
 [class*="col-"] {
   height: 100%;
-}
-
-:focus {
-  outline: 0;
 }
 
 .img100 {
@@ -81,17 +87,10 @@ ul {
   margin: 0 auto;
 }
 
-.arrow_down::after {
-  content: "\f107";
-  font-family: "FontAwesome";
-  padding-left: 3px;
-}
-
 .carousel_container > .carousel_item {
   width: 80%;
   margin: 0 auto;
 }
-
 .current_carousel_item > i.fa-circle {
   font-size: 12px;
   color: #0069FF;
@@ -286,7 +285,7 @@ main #build {
 }
 
 #build .carousel_container > .carousel_item img  {
-  box-shadow: 0px 1px 2px -1px #031b4eee;
+  box-shadow: 2px 2px 2px -1px #031b4eee;
   border-radius: 5px;
   margin: 0 auto;
 }
@@ -306,6 +305,48 @@ main #features {
   margin-bottom: 40px;
 }
 /* /features */
+
+/* speed */
+main #speed {
+  padding: 50px 0;
+  background-color: #031B4E;
+  background-image: url("../img/map.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+#speed h2 {
+  font-size: 1.5em;
+}
+
+#speed ul {
+  margin-bottom: 30px;
+}
+
+#speed ul li {
+  font-size: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid #8F9AB0;
+  font-weight: 600;
+}
+#speed ul li:last-child {
+  border-bottom: 0;
+}
+
+#speed ul li .city_name {
+  color: #8F9AB0;
+}
+
+#speed ul li .speed_test {
+  color: #00d7d2;
+}
+#speed ul li .speed_test:hover {
+  color: #162CD1;
+}
+/* /speed */
+
 
 
 /* /MAIN */
@@ -355,6 +396,11 @@ main #features {
     margin-bottom: 0;
   }
 
+  #speed h2 {
+    font-size: 2.3em;
+  }
+
+
 }
 /* /dispositivi SM */
 
@@ -391,7 +437,14 @@ main #features {
     width: 125px;
   }
 
+  #speed ul {
+    margin-bottom: 0;
+  }
 
+  #speed ul li {
+    font-size: 14px;
+    padding: 12px 0;
+  }
 }
 /* /dispositivi MD */
 
