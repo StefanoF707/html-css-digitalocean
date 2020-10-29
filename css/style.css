@@ -20,6 +20,7 @@ h1 {
 h2.title {
   font-size: 2.3em;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 p.subtitle {
@@ -30,8 +31,32 @@ p.subtitle {
   margin-bottom: 50px;
 }
 
+h6.item_title {
+  font-size: 17px;
+  padding-top: 10px;
+}
+p.item_subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: #806987;
+}
+
 ul {
   list-style: none;
+}
+
+.arrow_link {
+  font-weight: 600;
+}
+.arrow_link::after {
+  content: "\f105";
+  font-family: "FontAwesome";
+  padding-left: 7px;
+  vertical-align: middle;
+}
+.arrow_link:hover {
+  text-decoration: none;
+  color: #1633FF;
 }
 
 .container,
@@ -213,20 +238,6 @@ main #brands {
   width: 140px;
   vertical-align: middle;
 }
-
-#brands > .customer_link {
-  font-weight: 600;
-}
-#brands > .customer_link::after {
-  content: "\f105";
-  font-family: "FontAwesome";
-  padding-left: 7px;
-  vertical-align: middle;
-}
-#brands > .customer_link:hover {
-  text-decoration: none;
-  color: #1633FF;
-}
 /* /brands */
 
 /* deploy */
@@ -266,16 +277,6 @@ main #deploy {
 #deploy .deploy_item {
   margin: 30px 0;
 }
-
-#deploy .deploy_item h6 {
-  font-size: 17px;
-  padding-top: 10px;
-}
-#deploy .deploy_item p {
-  font-size: 15px;
-  font-weight: 500;
-  color: #806987;
-}
 /* /deploy */
 
 /* build */
@@ -294,8 +295,18 @@ main #build {
   margin: 15px 25px;
   font-weight: 600;
 }
-
 /* /build */
+
+/* features */
+main #features {
+  padding: 50px 0;
+}
+
+#features .features_item {
+  margin-bottom: 40px;
+}
+/* /features */
+
 
 /* /MAIN */
 
@@ -340,7 +351,9 @@ main #build {
     padding-right: 15px;
   }
 
-
+  #features .features_item {
+    margin-bottom: 0;
+  }
 
 }
 /* /dispositivi SM */
