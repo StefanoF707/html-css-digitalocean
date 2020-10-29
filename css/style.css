@@ -8,33 +8,8 @@ body {
 }
 
 /* UTILITIES */
-.container,
-.row,
-[class*="col-"] {
-  height: 100%;
-}
-
-:focus {
-  outline: 0;
-}
-
-.img100 {
-  width: 100%;
-}
-
-.wrapper90 {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.arrow_down::after {
-  content: "\f107";
-  font-family: "FontAwesome";
-  padding-left: 3px;
-}
-
 h1,h2,h3,h4,h5,h6 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 h1 {
@@ -57,6 +32,45 @@ p.subtitle {
 
 ul {
   list-style: none;
+}
+
+.container,
+.row,
+[class*="col-"] {
+  height: 100%;
+}
+
+:focus {
+  outline: 0;
+}
+
+.img100 {
+  width: 100%;
+}
+.img80 {
+  width: 80%;
+}
+
+.wrapper90 {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.arrow_down::after {
+  content: "\f107";
+  font-family: "FontAwesome";
+  padding-left: 3px;
+}
+
+.carousel_container > .carousel_item {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.current_carousel_item > i.fa-circle {
+  font-size: 12px;
+  color: #0069FF;
+  cursor: pointer;
 }
 /* /UTILITIES */
 
@@ -264,6 +278,24 @@ main #deploy {
 }
 /* /deploy */
 
+/* build */
+main #build {
+  padding: 50px 0;
+  background: #F3F5F9;
+}
+
+#build .carousel_container > .carousel_item img  {
+  box-shadow: 0px 1px 2px -1px #031b4eee;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+#build .carousel_container p  {
+  margin: 15px 25px;
+  font-weight: 600;
+}
+
+/* /build */
 
 /* /MAIN */
 
@@ -274,8 +306,30 @@ main #deploy {
 /* dispositivi SM */
 @media screen and (min-width: 768px) {
 
+  /* UTILITIES */
+  .carousel_container > .carousel_item {
+    width: 60%;
+  }
+  .carousel_container > .carousel_item::before {
+    content: "\f053";
+    font-family: "FontAwesome";
+    color: #9AA4B9;
+    font-size: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .carousel_container > .carousel_item::after {
+    content: "\f054";
+    font-family: "FontAwesome";
+    font-size: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  /* /UTILITIES */
+
+
   #brands .brands_item > img {
-      width: 175px;
+    width: 175px;
   }
 
   #deploy ul {
@@ -286,12 +340,15 @@ main #deploy {
     padding-right: 15px;
   }
 
+
+
 }
 /* /dispositivi SM */
 
 
 /* dispositivi MD */
 @media screen and (min-width: 992px) {
+
 
   #navbar .logo_container {
     width: 180px;
