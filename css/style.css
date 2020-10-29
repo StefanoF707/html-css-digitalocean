@@ -22,6 +22,11 @@ body {
   width: 100%;
 }
 
+.wrapper90 {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .arrow_down::after {
   content: "\f107";
   font-family: "FontAwesome";
@@ -35,6 +40,23 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
   font-size: 3em;
   color: #fff;
+}
+
+h2.title {
+  font-size: 2.3em;
+  text-align: center;
+}
+
+p.subtitle {
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: 500;
+  color: #806987;
+  margin-bottom: 50px;
+}
+
+ul {
+  list-style: none;
 }
 /* /UTILITIES */
 
@@ -91,13 +113,12 @@ header #jumbotron {
 }
 
 #jumbotron .subtitle {
-  font-size: 1.3em;
-  font-weight: 500;
   color: #BBCCFF;
-  margin-bottom: 30px;
+  text-align: left;
 }
 
 #jumbotron .signUp_card {
+  max-width: 320px;
   padding: 15px;
   border-radius: 7px;
   background: #fff;
@@ -152,7 +173,7 @@ header #jumbotron {
 /* MAIN */
 /* brands */
 main #brands {
-  padding: 50px 0;
+  padding: 40px 0;
   background: #F3F5F9;
 }
 
@@ -194,6 +215,56 @@ main #brands {
 }
 /* /brands */
 
+/* deploy */
+main #deploy {
+  padding: 50px 0;
+}
+
+#deploy ul {
+  padding-left: 20px;
+  margin: 30px 0;
+}
+
+#deploy ul li  {
+  height: 50px;
+  line-height: 50px;
+}
+
+#deploy ul li > a {
+  display: inline-block;
+  height: 100%;
+  font-size: 18px;
+  padding-left: 10px;
+  font-weight: 600;
+  color: #806987;
+  border-left: 2px solid #bec0c3;
+}
+#deploy ul li > a.list_item_selected {
+  color: inherit;
+  border-left-color: #016AFF;
+}
+#deploy ul li > a:hover {
+  color: inherit;
+  border-left-color: #016AFF;
+  text-decoration: none;
+}
+
+#deploy .deploy_item {
+  margin: 30px 0;
+}
+
+#deploy .deploy_item h6 {
+  font-size: 17px;
+  padding-top: 10px;
+}
+#deploy .deploy_item p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #806987;
+}
+/* /deploy */
+
+
 /* /MAIN */
 
 
@@ -205,7 +276,15 @@ main #brands {
 
   #brands .brands_item > img {
       width: 175px;
-    }
+  }
+
+  #deploy ul {
+    padding-left: 0;
+  }
+
+  #deploy .deploy_item  {
+    padding-right: 15px;
+  }
 
 }
 /* /dispositivi SM */
