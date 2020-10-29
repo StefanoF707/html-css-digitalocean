@@ -101,7 +101,6 @@ header #jumbotron {
   padding: 15px;
   border-radius: 7px;
   background: #fff;
-  max-width: 400px;
   margin: 0 auto;
 }
 #jumbotron .signUp_card h3 {
@@ -176,7 +175,7 @@ main #brands {
   float: left;
 }
 .brands_item > img {
-  width: 110px;
+  width: 140px;
   vertical-align: middle;
 }
 
@@ -201,6 +200,17 @@ main #brands {
 
 /* MEDIA QUERIES */
 
+/* dispositivi SM */
+@media screen and (min-width: 768px) {
+
+  #brands .brands_item > img {
+      width: 175px;
+    }
+
+}
+/* /dispositivi SM */
+
+
 /* dispositivi MD */
 @media screen and (min-width: 992px) {
 
@@ -208,6 +218,9 @@ main #brands {
     width: 180px;
   }
 
+  #jumbotron .signUp_card {
+    max-width: 400px;
+  }
 
   #jumbotron .signUp_card h3 {
     font-size: 29px
@@ -225,8 +238,8 @@ main #brands {
     height: 110px;
     line-height: 110px;
   }
-.brands_item > img {
-    width: 120px;
+  #brands .brands_item > img {
+    width: 125px;
   }
 
 
