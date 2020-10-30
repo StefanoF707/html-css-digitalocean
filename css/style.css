@@ -35,11 +35,11 @@ p.subtitle {
   margin-bottom: 50px;
 }
 
-h6.item_title {
+.item_title {
   font-size: 17px;
   padding-top: 10px;
 }
-p.item_subtitle {
+.item_subtitle {
   font-size: 15px;
   font-weight: 500;
   color: #806987;
@@ -89,6 +89,7 @@ ul {
 
 .carousel_container > .carousel_item {
   width: 80%;
+  max-width: 600px;
   margin: 0 auto;
 }
 .current_carousel_item > i.fa-circle {
@@ -347,6 +348,49 @@ main #speed {
 }
 /* /speed */
 
+/* teams */
+main #teams {
+  padding: 50px 0;
+  background: #F3F5F9;
+}
+
+#teams .carousel_container .carousel_item .internal_carousel_item {
+  display: inline-block;
+  width: 80%;
+  vertical-align: middle;
+  margin: 0 auto;
+  padding: 30px 10px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 2px 2px 2px -1px #031b4eee;
+}
+
+.carousel_item .internal_carousel_item img {
+  width: 80%;
+}
+
+.carousel_item .internal_carousel_item p.subtitle {
+  font-size: 1.2em;
+  padding: 20px 0;
+  margin-bottom: 0;
+}
+.carousel_item .internal_carousel_item p.subtitle::before {
+  content: url("../img/icons/quotation-marks-left.svg");
+}
+.carousel_item .internal_carousel_item p.subtitle::after {
+  content: url("../img/icons/quotation-marks-right.svg");
+}
+
+.carousel_item .internal_carousel_item h6 {
+  padding-bottom: 10px;
+}
+
+#teams .carousel_container .current_carousel_item {
+  margin-top: 20px;
+}
+/* /teams */
+
+
 
 
 /* /MAIN */
@@ -400,6 +444,13 @@ main #speed {
     font-size: 2.3em;
   }
 
+  #teams .carousel_item .internal_carousel_item img {
+    width: 50%;
+  }
+
+  #teams .carousel_item .internal_carousel_item p.subtitle {
+    font-size: 1.3em;
+  }
 
 }
 /* /dispositivi SM */
@@ -445,6 +496,7 @@ main #speed {
     font-size: 14px;
     padding: 12px 0;
   }
+
 }
 /* /dispositivi MD */
 
