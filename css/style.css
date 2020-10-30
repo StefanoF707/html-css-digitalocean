@@ -427,7 +427,37 @@ main #get_started {
 footer {
   padding: 50px 0;
   background: #010E28;
+  color: #8B94A9;
 }
+
+/* contacts */
+footer .contacts .made {
+  font-weight: 600;
+  color: #556483;
+}
+
+footer .contacts .social_container {
+  width: 200px;
+  margin-top: 10px;
+}
+footer .contacts .social_container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer .contacts .social_container .social_item {
+  float: left;
+  width: calc(100% / 5 - 5px);
+  margin-right: 5px;
+  font-size: 26px;
+  color: inherit;
+}
+footer .contacts .social_container .social_item:hover {
+  color: #fff;
+}
+/* contacts */
+
 /* /FOOTER */
 
 
