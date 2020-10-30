@@ -1,7 +1,3 @@
-.debug [class*="col-"] {
-    border: 1px solid #000;
- }
-
 body {
   font-family: 'Montserrat', sans-serif;
   color: #031B4E;
@@ -17,7 +13,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.2em;
   color: #fff;
 }
 
@@ -50,6 +46,7 @@ ul {
 
 .arrow_link {
   font-weight: 600;
+  vertical-align: middle;
 }
 .arrow_link::after {
   content: "\f105";
@@ -57,7 +54,8 @@ ul {
   padding-left: 7px;
   vertical-align: middle;
 }
-.arrow_link:hover {
+.arrow_link:hover,
+.link_inline:hover {
   text-decoration: none;
   color: #1633FF;
 }
@@ -150,10 +148,15 @@ header #jumbotron {
   background-position: bottom;
 }
 
-#jumbotron .subtitle {
-  color: #BBCCFF;
-  text-align: left;
+#jumbotron h1,
+#jumbotron p.subtitle {
+  text-align: center;
 }
+
+#jumbotron p.subtitle {
+  color: #BBCCFF;
+}
+
 
 #jumbotron .signUp_card {
   max-width: 320px;
@@ -162,11 +165,14 @@ header #jumbotron {
   background: #fff;
   margin: 0 auto;
 }
+
 #jumbotron .signUp_card h3 {
   color:  #006AFF;
+  font-size: 20px
 }
 
 .signUp_card .btn_create_account {
+  font-size: 15px;
   font-weight: 600;
   color: #fff;
   background: #579AFF;
@@ -176,6 +182,7 @@ header #jumbotron {
 }
 
 .signUp_card .btn_google {
+  font-size: 15px;
   position: relative;
   font-weight: bold;
   background: #fff;
@@ -369,7 +376,7 @@ main #teams {
 }
 
 .carousel_item .internal_carousel_item p.subtitle {
-  font-size: 1.2em;
+  font-size: 14px;
   padding: 20px 0;
   margin-bottom: 0;
 }
@@ -456,14 +463,14 @@ footer .contacts .social_container .social_item {
 
 /* links */
 footer .links .list_heading {
-  font-size: 1.3em;
+  font-size: 1em;
   margin-top: 20px;
   color: #fff;
 }
 
 footer .links ul.list-unstyled a {
   display: inline-block;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 600;
   margin-bottom: 5px;
   color: inherit;
@@ -477,6 +484,7 @@ footer .links ul.list-unstyled a:hover {
 }
 /* /FOOTER */
 
+
 /* live-chat */
 body #live_chat {
   position: fixed;
@@ -488,6 +496,8 @@ body #live_chat {
   position: relative;
   width: 80px;
   cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0px 0px 6px 1px #00000050;
 }
 #live_chat > .live_chat_button::after {
   content: "2";
@@ -506,19 +516,19 @@ body #live_chat {
   border-radius: 50%;
 }
 #live_chat > .live_chat_button img {
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 #live_chat > .live_chat_help {
   width: 300px;
   position: absolute;
-  right: 100px;
+  right: 120px;
   bottom: 5px;
   font-weight: bold;
   padding: 10px;
   background: #fff;
+  box-shadow: 0px 0px 6px 1px #00000030;
   border-radius: 10px;
-  opacity: 0;
 }
 #live_chat > .live_chat_help::after {
   content: "";
@@ -529,14 +539,13 @@ body #live_chat {
   bottom: 15px;
   right: -5px;
   transform: rotate(45deg);
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
-#live_chat .live_chat_button:hover + .live_chat_help {
-  animation: live_chat_help 1s forwards;
+#live_chat > .live_chat_button:hover {
+  animation: live_chat_button 0.8s;
 }
 /* /live-chat */
-
 
 
 
@@ -573,7 +582,7 @@ body #live_chat {
     color: #9AA4B9;
     font-size: 30px;
     margin-right: 20px;
-    cursor: pointer;
+    cursor: no-drop;
   }
   .carousel_container > .carousel_item::after {
     content: "\f054";
@@ -584,6 +593,18 @@ body #live_chat {
   }
   /* /UTILITIES */
 
+  #jumbotron h1,
+  #jumbotron p.subtitle {
+    text-align: left;
+  }
+
+  #jumbotron .signUp_card h3 {
+    font-size: 29px
+  }
+  #jumbotron .signUp_card .btn_create_account,
+  #jumbotron .signUp_card .btn_google {
+    font-size: 18px;
+  }
 
   #brands .brands_item > img {
     width: 175px;
@@ -610,7 +631,15 @@ body #live_chat {
   }
 
   #teams .carousel_item .internal_carousel_item p.subtitle {
-    font-size: 1.3em;
+    font-size: 17px;
+  }
+
+  footer .links .list_heading {
+    font-size: 1.3em
+  }
+
+  footer .links ul.list-unstyled a {
+    font-size: 15px;
   }
 
 }
@@ -620,7 +649,6 @@ body #live_chat {
 /* dispositivi MD */
 @media screen and (min-width: 992px) {
 
-
   #navbar .logo_container {
     width: 180px;
   }
@@ -628,11 +656,6 @@ body #live_chat {
   #jumbotron .signUp_card {
     max-width: 400px;
   }
-
-  #jumbotron .signUp_card h3 {
-    font-size: 29px
-  }
-
 
   #brands .brands_item_container {
     width: 80%;
@@ -667,6 +690,22 @@ body #live_chat {
 
 }
 /* /dispositivi MD */
+
+/* dispositivi LG */
+@media screen and (min-width: 1200px) {
+
+  #live_chat > .live_chat_help {
+    display: none;
+    opacity: 0;
+  }
+  #live_chat .live_chat_button:hover + .live_chat_help {
+    animation: live_chat_help 1s forwards;
+    display: block;
+  }
+
+}
+/* /dispositivi LG */
+
 /* /MEDIA QUERIES */
 
 
@@ -720,6 +759,14 @@ body #live_chat {
   }
 }
 
+@keyframes live_chat_button {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes live_chat_help {
   0% {
     opacity: 0;
