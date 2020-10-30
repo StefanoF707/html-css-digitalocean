@@ -23,7 +23,7 @@ h1 {
 
 h2.title {
   font-size: 2.3em;
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 20px;
 }
 
@@ -390,10 +390,45 @@ main #teams {
 }
 /* /teams */
 
+/* get_started */
+main #get_started {
+  padding: 50px 0;
+  background-image: url("../img/prism.svg");
+  background-color: #015BFF;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+#get_started [class*="col-"] {
+  height: 80px;
+  line-height: 80px;
+}
 
+#get_started h2.title {
+  margin: 0;
+  line-height: inherit;
+  color: #fff;
+}
 
+#get_started .btn_create_account_bottom {
+  font-weight: 600;
+  color: #0069FF;
+  background: #fff;
+  padding: 15px 25px;
+}
+#get_started .btn_create_account_bottom:hover {
+  animation: btn_account_bottom 0.3s forwards;
+}
+/* /get_started */
 /* /MAIN */
+
+
+/* FOOTER */
+footer {
+  padding: 50px 0;
+  background: #010E28;
+}
+/* /FOOTER */
 
 
 
@@ -497,10 +532,17 @@ main #teams {
     padding: 12px 0;
   }
 
+  #get_started [class*="col-"]:first-child {
+    text-align: left;
+  }
+  #get_started [class*="col-"]:last-child {
+    text-align: right;
+  }
+
 }
 /* /dispositivi MD */
-
 /* /MEDIA QUERIES */
+
 
 
 /* KEYFRAMES */
@@ -521,6 +563,14 @@ main #teams {
   }
   100% {
     background: #006AFF;
+  }
+}
+@keyframes btn_account_bottom {
+  0% {
+    background: #fff;
+  }
+  100% {
+    background: #CBD4E4;
   }
 }
 
