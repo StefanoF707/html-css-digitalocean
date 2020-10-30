@@ -381,7 +381,7 @@ main #teams {
   content: url("../img/icons/quotation-marks-right.svg");
 }
 
-.carousel_item .internal_carousel_item h6 {
+.carousel_item .internal_carousel_item h5 {
   padding-bottom: 10px;
 }
 
