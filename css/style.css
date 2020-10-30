@@ -17,18 +17,17 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   color: #fff;
 }
 
 h2.title {
-  font-size: 2.3em;
-  /* text-align: center; */
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 
 p.subtitle {
-  font-size: 1.3em;
+  font-size: 1em;
   text-align: center;
   font-weight: 500;
   color: #806987;
@@ -438,7 +437,7 @@ footer .contacts .made {
 
 footer .contacts .social_container {
   width: 200px;
-  margin-top: 10px;
+  margin: 20px 0;
 }
 footer .contacts .social_container::after {
   content: "";
@@ -453,11 +452,29 @@ footer .contacts .social_container .social_item {
   font-size: 26px;
   color: inherit;
 }
-footer .contacts .social_container .social_item:hover {
-  color: #fff;
-}
 /* contacts */
 
+/* links */
+footer .links .list_heading {
+  font-size: 1.3em;
+  margin-top: 20px;
+  color: #fff;
+}
+
+footer .links ul.list-unstyled a {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: inherit;
+}
+/* /links */
+
+footer .contacts .social_container .social_item:hover,
+footer .links ul.list-unstyled a:hover {
+  animation: footer_animation 0.2s forwards;
+  text-decoration: none;
+}
 /* /FOOTER */
 
 
@@ -468,6 +485,24 @@ footer .contacts .social_container .social_item:hover {
 @media screen and (min-width: 768px) {
 
   /* UTILITIES */
+  h1 {
+    font-size: 3em;
+    color: #fff;
+  }
+
+  h2.title {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+  }
+
+  p.subtitle {
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 500;
+    color: #806987;
+    margin-bottom: 50px;
+  }
+
   .carousel_container > .carousel_item {
     width: 60%;
   }
@@ -612,6 +647,15 @@ footer .contacts .social_container .social_item:hover {
   100% {
     color: #000;
     border: 1px solid #000;
+  }
+}
+
+@keyframes footer_animation {
+  0% {
+    color: #8B94A9;
+  }
+  100% {
+    color: #fff;
   }
 }
 /* /KEYFRAMES */
