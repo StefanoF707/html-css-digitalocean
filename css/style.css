@@ -257,15 +257,15 @@ main #deploy {
 }
 
 #deploy ul li  {
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
 }
 
 #deploy ul li > a {
   display: inline-block;
   height: 100%;
-  font-size: 18px;
-  padding-left: 10px;
+  font-size: 14px;
+  padding-left: 8px;
   font-weight: 600;
   color: #806987;
   border-left: 2px solid #bec0c3;
@@ -670,6 +670,20 @@ body #live_chat {
   }
   #brands .brands_item > img {
     width: 125px;
+  }
+
+  #deploy ul {
+    margin: 30px 0;
+  }
+
+  #deploy ul li  {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  #deploy ul li > a {
+    font-size: 18px;
+    padding-left: 10px;
   }
 
   #speed ul {
